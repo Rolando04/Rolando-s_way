@@ -1,0 +1,9 @@
+room: main.o room.o
+	gcc main.o room.o -o room
+main.o: main.c room.h
+	gcc -c main.c -o main.o
+room.o: room.c room.h
+	gcc -c room.c -o room.o
+clean:
+	rm *.o
+	rm room

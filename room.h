@@ -7,5 +7,10 @@ char tvAsset[7];
 char tvSerial[13];
 }roomInfo;
 
-
+roomInfo* createRooms(FILE* fileIn);
+int fillRecords(roomInfo* r, FILE* fileIn);
+void searchRoom(char roomID[], roomInfo* r, int size);
+void searchAsset(char assetID[], roomInfo* r, int size);
+void printRoom(roomInfo* r, int size);
+void printMenu(void);
 #endif
